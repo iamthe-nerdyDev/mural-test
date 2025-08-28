@@ -127,7 +127,7 @@ class Api {
         `${this.baseUrl}/transaction/payout/execute/${transaction_id}`,
         {
           method: "POST",
-          body: JSON.stringify({ signature }),
+          body: JSON.stringify({ signature, pin: "123456" }),
           headers: Api.getHeaders(),
         }
       );
